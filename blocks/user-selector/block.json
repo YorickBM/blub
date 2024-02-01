@@ -1,0 +1,15 @@
+{
+    "apiVersion": 3,
+    "title": "User Selector",
+    "name": "yorickblom/user-selector",
+    "description": "Select multiple users from all available users",
+    "category": "layout",
+    "icon": "admin-users",
+    "editorScript": "file:./build/user-selector.js",
+    "style": "file:./style.css",
+    "supports": {
+        "color": true
+    },
+    "attributes": {
+    }
+}

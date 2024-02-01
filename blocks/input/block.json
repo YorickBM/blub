@@ -1,0 +1,54 @@
+{
+    "apiVersion": 3,
+    "title": "Input",
+    "name": "yorickblom/input",
+    "description": "Input field for form block",
+    "category": "layout",
+    "icon": "welcome-write-blog",
+    "editorScript": "file:./build/input.js",
+    "style": "file:./style.css",
+    "supports": {
+        "color": true,
+        "border": true
+    },
+    "attributes": {
+        "field": {
+            "type": "select",
+            "default": "input"
+        },
+
+        "rows": {
+            "type": "integer",
+            "default": "3"
+        },
+
+        "name": {
+            "type": "string",
+            "default": ""
+        },
+        "type": {
+            "type": "select",
+            "default": "text"
+        },
+        "placeholder": {
+            "type": "string",
+            "default": ""
+        },
+        "default": {
+            "type": "string",
+            "default": ""
+        },
+        "required": {
+            "type": "boolean",
+            "default": false
+        },
+        "hidden": {
+            "type": "boolean",
+            "default": false
+        },
+        "submit": {
+            "type": "boolean",
+            "default": false
+        }
+    }
+}

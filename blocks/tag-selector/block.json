@@ -1,0 +1,15 @@
+{
+    "apiVersion": 3,
+    "title": "Tag Selector",
+    "name": "yorickblom/tag-selector",
+    "description": "Select multiple tags from all available tags",
+    "category": "layout",
+    "icon": "tag",
+    "editorScript": "file:./build/tag-selector.js",
+    "style": "file:./style.css",
+    "supports": {
+        "color": true
+    },
+    "attributes": {
+    }
+}

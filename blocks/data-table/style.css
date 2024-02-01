@@ -1,0 +1,74 @@
+table.wp-block-yorickblom-data-table {
+    border: 1px solid #c3c4c7;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+
+    border-spacing: 0;
+    width: 100% !important;
+    clear: both;
+    margin: 0;
+
+    font-size: 14px;
+}
+
+.dataTables_wrapper .dataTables_info {
+    float: left;
+    text-align: left;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    float: right;
+    text-align: right;
+}
+
+table.wp-block-yorickblom-data-table thead th {
+    border-bottom: 1px solid #c3c4c7 !important;
+    background-color: white;
+
+    font-weight: 100;
+}
+
+table.wp-block-yorickblom-data-table tr:nth-child(odd) {
+    background-color: #f6f7f7;
+}
+
+table.wp-block-yorickblom-data-table tbody tr.child ul.dtr-details li {
+    border: none;
+}
+
+.pagination>li>a, .pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #337ab7;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.tooltips {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tooltips .title {
+    width: 100%;
+}
+
+.tooltip {
+    visibility: hidden; 
+    
+}
+
+.tooltip a {
+    color: rgb(34, 113, 177);
+    font-size: 13px;
+    line-height: 19.5px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+tr:hover .tooltips > .tooltip {
+    visibility: visible; 
+}

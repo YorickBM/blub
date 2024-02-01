@@ -1,0 +1,32 @@
+{
+    "apiVersion": 3,
+    "title": "Data Table",
+    "name": "yorickblom/data-table",
+    "description": "Load data table script",
+    "category": "layout",
+    "icon": "editor-table",
+    "editorScript": "file:./build/data-table.js",
+    "style": "file:./style.css",
+    "attributes": {
+        "id": {
+            "type": "string",
+            "default": ""
+        },
+        "columns": {
+            "type": "string",
+            "default": ""
+        },
+        "url": {
+            "type": "string",
+            "default": ""
+        },
+        "post": {
+            "type": "string",
+            "default": "{\n}"
+        },
+        "json": {
+            "type": "string",
+            "default": ""
+        }
+    }
+}

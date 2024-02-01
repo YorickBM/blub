@@ -1,0 +1,22 @@
+{
+    "name": "dashboard",
+    "version": "1.0.1",
+    "description": "Plugin voor bij het thema Modulair Dashboard, om support te leveren voor sensors, grafieken en block editor features",
+    "author": "Yorick Blom",
+    "main": "build/index.js",
+    "scripts": {
+        "start": "wp-scripts start",
+        "build": "wp-scripts build",
+        "b-form": "wp-scripts build /blocks/form --output-path=./blocks/form/build",
+        "b-input": "wp-scripts build /blocks/input --output-path=./blocks/input/build",
+        "b-tags": "wp-scripts build /blocks/tag-selector --output-path=./blocks/tag-selector/build",
+        "b-users": "wp-scripts build /blocks/user-selector --output-path=./blocks/user-selector/build",
+        "b-table": "wp-scripts build /blocks/data-table --output-path=./blocks/data-table/build"
+    },
+    "devDependencies": {
+        "@wordpress/scripts": "^26.14.0"
+    },
+    "dependencies": {
+        "@10up/block-components": "^1.15.10"
+    }
+}

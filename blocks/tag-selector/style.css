@@ -1,0 +1,37 @@
+.wp-block-yorickblom-tag-selector .select2-container--default .select2-selection--multiple {
+    position: relative;
+
+    width: 100%;
+    padding: 8px 10px;
+    padding-top: 2px;
+    margin-bottom: 10px;
+
+    color: #4D4D4D;
+    resize: vertical;
+    -webkit-appearance: none;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+    transition: all .14s ease-out;
+    
+    border-radius: 0px;
+    border: 1px solid #DDD;
+}
+
+.wp-block-yorickblom-tag-selector .select2-container {
+    width: 100% !important;
+}
+
+.wp-block-yorickblom-tag-selector .select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #8EA4D5;
+    border: 1px solid #0076E0;
+    color: #0076E0;
+}
+
+.wp-block-yorickblom-tag-selector .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    border-right: none;
+    color: #0076E0;
+}
+
+.wp-block-yorickblom-tag-selector .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
+    background-color: #8EA4D5;
+    color: white;
+}

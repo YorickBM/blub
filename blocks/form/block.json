@@ -1,0 +1,15 @@
+{
+    "apiVersion": 3,
+    "title": "Form",
+    "name": "yorickblom/form",
+    "description": "Form block, to decide what action to be taken upon enclosed input fields.",
+    "category": "layout",
+    "icon": "media-text",
+    "editorScript": "file:./build/form.js",
+    "attributes": {
+        "action": {
+            "type": "string",
+            "default": ""
+        }
+    }
+}

@@ -1,0 +1,33 @@
+<?php
+use ModulairDashboard\Dashboard;
+use ModulairDashboard\DashboardPlugin;
+
+/**
+ * Action triggered upon requesting to remove user from dashboard
+ * Raw Data: 
+ */
+add_action('wp_ajax_remove_sensor_from_dashboard', function () {
+    if(!isset($_POST['post_id']) || empty($_POST['post_id']))  wp_send_json_error(new WP_Error( 'invalid.post.id', 'Invalid POST id given.', '' ));
+    if(!isset($_POST['sensor_id']) || empty($_POST['sensor_id']))  wp_send_json_error(new WP_Error( 'invalid.sensor.id', 'Invalid Sensor id given.', '' ));
+
+    //Sanitize inputs
+    $post_id = sanitize_text_field($_POST['post_id']);
+    $sensor_id = sanitize_text_field($_POST['sensor_id']);
+
+    //Get object for dashboard with its data
+    $dashboard = new Dashboard($post_id);
+    $sensor = DashboardPlugin::get_instance()->sensor_table->select_data("`id` = $sensor_id");
+
+    //Object controle
+    if ($dashboard === null || $dashboard->Name == '') wp_send_json_error(new WP_Error( 'dashboard.not.found', "Uw dashboard is niet gevonden...", '' ));
+    if(count($sensor) != 1) wp_send_json_error(new WP_Error( 'sensor.not.found', "De sensor die u wilt verwijderen is niet gevonden...", '' ));
+
+    //Toegang controle
+    if (!$dashboard->userHasAccess(get_current_user_id())) wp_send_json_error(new WP_Error( 'dashboard.no.access', "U heeft geen toegang tot deze functionaliteit!", '' ));
+    if (!$dashboard->hasSensor($sensor_id)) wp_send_json_error(new WP_Error( 'sensor.no.access', "De sensor die u wilt verwijderen, heeft al geen toegang meer tot het dashboard!", '' ));
+
+    $dashboard->removeSensor($sensor_id);
+
+    wp_send_json_success($dashboard->getPublicStructure());
+
+});
