@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Dashboard
  * Description: Plugin voor bij het thema Modulair Dashboard, om support te leveren voor sensors, grafieken en block editor features.
- * Version:     1.0.1
+ * Version:     1.0.3
  * Author:      Yorick
  * Author URI:  https://yorickblom.nl
  * Text Domain: dashboard
@@ -10,7 +10,7 @@
  * Deze plugin is ontwikkelt voor het Modulaire Dashboard van Green Tech Lab. Deze plugin facilliteerd de verbinding met sensors & grafieken die deze data weergeven.
  *
  * @package   Dashboard
- * @version   1.0.1
+ * @version   1.0.3
  * @author    Yorick <info@yorickblom.nl>
  */
 
@@ -21,7 +21,7 @@ class DashboardPlugin {
     // Private variables
     private $dir = "";
     private $uri = "";
-    private $version = "1.0.1";
+    private $version = "1.0.3";
     
     public $sensor_table;
     public $graphs_table;
